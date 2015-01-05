@@ -1,0 +1,40 @@
+/* <div class="adfox_content_exists"></div> - verification &#1085;&#1072; &#1079;&#1072;&#1075;&#1088;&#1091;&#1079;&#1082;&#1091; */
+var AdFox_object_491063509 = '';
+var tracking_url_491063509 = 'http://content.adfox.ru/transparent.gif';
+var AdFoxEvent_491063509 = new Image();
+if(tracking_url_491063509 != '') {
+    //var rand_491063509 = Math.floor(Math.random() * 1000000);
+        AdFoxEvent_491063509.src = 'http://content.adfox.ru/transparent.gif';
+	    tracking_url_491063509 = '';  
+}
+var tracking_url_imp_491063509 = 'http://ads.adfox.ru/171817/event?hash=a1d19185dde6b74b&pm=u&lts=epoltum&pr=bpiplib&p5=clhtc&rand=dyhbgnm&p1=brbmz&p2=emhk';
+var AdFoxEvent_imp_491063509 = new Image();
+if(tracking_url_imp_491063509 != '') {
+    //var rand_imp_491063509 = Math.floor(Math.random() * 1000000);
+        AdFoxEvent_imp_491063509.src = 'http://ads.adfox.ru/171817/event?hash=a1d19185dde6b74b&pm=u&lts=epoltum&pr=bpiplib&p5=clhtc&rand=dyhbgnm&p1=brbmz&p2=emhk';
+	    tracking_url_imp_491063509 = '';  
+}
+var AdFox_variable_491063509 = 0;
+var AdFox_id_491063509 = 'AdFox_banner_0';
+var AdFox_yn_491063509 = 0;
+var AdFox_pdoc_491063509 = parent.document;
+    if(AdFox_pdoc_491063509 != document){
+	   var AdFox_pde_491063509 = AdFox_pdoc_491063509.getElementById(AdFox_id_491063509);
+	   var AdFox_yn_491063509 = AdFox_pde_491063509?1:0;
+	   }
+
+  AdFox_variable_491063509 = 1;
+  AdFox_object_491063509 += '<a href="http://ads.adfox.ru/171817/goLink?pr=bpiplib&p5=clhtc&p1=brbmz&p2=emhk" target=_blank><img src="http://content.adfox.ru/140526/adfox/374454/1017711.jpg" width="300" height="250" alt="" border=0></a><div class="adfox_content_exists"></div>';
+  
+if(AdFox_yn_491063509){
+   if(AdFox_variable_491063509){
+      AdFox_pde_491063509.innerHTML = AdFox_object_491063509;
+      if('300' == '100%'){AdFox_pde_491063509.style.width = '300';
+	  }else{AdFox_pde_491063509.style.width = '300px';}
+	  if('250' == '100%') {AdFox_pde_491063509.style.height = '250';
+	  }else {AdFox_pde_491063509.style.height = '250px';}
+   }
+   setTimeout("document.close();", 1000);
+}else{
+   document.write(AdFox_object_491063509);
+}
