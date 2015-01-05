@@ -1,1 +1,0 @@
-crtg_content = 'crlen240=1;'; (function(){document.cookie = 'crtg_rta=' + escape(crtg_content) + '; path=/; expires=Wed, 04 Feb 2015 20:38:07 GMT; domain=lenta.ru';})();
