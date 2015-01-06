@@ -9,15 +9,16 @@
 // }
 
 dragOverHandler = function(event) {
-  console.log(event);
-}
-
-dropHandler = function(event) {
   event.preventDefault();
 }
 
-var body = document.body;
+dropHandler = function(event) {
+  console.log(event);
+}
 
-body.addEventListener('ondragover', dragOverHandler);
-body.addEventListener('ondrop', dropHandler);
+window.onload = function(){
+  var body = document.body;
+  body.addEventListener('ondragover', dragOverHandler);
+  body.addEventListener('ondrop', dropHandler);
+}
 
