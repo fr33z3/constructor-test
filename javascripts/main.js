@@ -16,7 +16,8 @@ dropHandler = function(event) {
   event.preventDefault();
 }
 
-var body = document.getElementsByTagName("body")[0]
+var body = Document.getElementsByTagName("body")[0];
+console.log(body);
 
 body.addEventListener('ondragover', dragOverHandler);
 body.addEventListener('ondrop', dropHandler);
