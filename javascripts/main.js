@@ -16,6 +16,6 @@ dropHandler = function(event) {
   console.log(event);
 }
 
-document.addEventListener('dragover', dragOverHandler);
-document.addEventListener('drop', dropHandler);
+document.addEventListener('dragover', dragOverHandler, false);
+document.addEventListener('drop', dropHandler, false);
 
