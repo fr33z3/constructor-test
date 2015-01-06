@@ -18,7 +18,7 @@ dropHandler = function(event) {
 
 window.onload = function(){
   var body = document.body;
-  body.addEventListener('ondragover', dragOverHandler);
-  body.addEventListener('ondrop', dropHandler);
+  body.addEventListener('dragover', dragOverHandler);
+  body.addEventListener('drop', dropHandler);
 }
 
