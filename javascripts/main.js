@@ -9,6 +9,7 @@
 // }
 
 dragOverHandler = function(event) {
+  console.log('over');
   event.preventDefault();
 }
 
