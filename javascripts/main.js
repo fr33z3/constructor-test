@@ -1,10 +1,12 @@
 console.log(123);
+
+previewDiv = function(objectSize) {
+  "<div width=" + objectSize.width + " height=" + objectSize.height + ">"
+  "</div>"
+}
+
 constructorListener = function(event) {
-  // data = event.data
-  // body = document.body
-  // if (data.type == 'setUp') {
-  // }
-  alert(event.data.type)
+  alert(prepareDiv(event.data))
 }
 
 if (window.addEventListener) {
