@@ -6,7 +6,7 @@ previewDiv = function(objectSize) {
 }
 
 constructorListener = function(event) {
-  alert(prepareDiv(event.data))
+  alert(previewDiv(event.data))
 }
 
 if (window.addEventListener) {
