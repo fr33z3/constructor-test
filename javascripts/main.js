@@ -1,6 +1,9 @@
 constructorListener = function(event) {
+  data = event.data
   body = document.body
-  body.innerHTML = body.innerHTML + 'some data'
+  if (data.type == 'setUp') {
+    alert(data)
+  }
 }
 
 if (window.addEventListener) {
