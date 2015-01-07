@@ -1,5 +1,5 @@
 constructorListener = function(event) {
-  alert(event.origin + ' ' + event.data);
+  console.log(event.origin + ' ' + event.data);
 }
 
 if (window.addEventListener) {
