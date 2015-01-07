@@ -1,3 +1,4 @@
+console.log(123);
 constructorListener = function(event) {
   // data = event.data
   // body = document.body
