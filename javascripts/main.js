@@ -1,5 +1,6 @@
 constructorListener = function(event) {
-  console.log(event.origin + ' ' + event.data);
+  body = document.body
+  body.innerHTML = body.innerHTML + 'some data'
 }
 
 if (window.addEventListener) {
