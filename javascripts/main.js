@@ -1,8 +1,8 @@
 console.log(123);
 
 previewDiv = function(objectSize) {
-  "<div width=" + objectSize.width + " height=" + objectSize.height + ">"
-  "</div>"
+  div = "<div width=" + objectSize.width + " height=" + objectSize.height + ">" + "</div>"
+  return div;
 }
 
 constructorListener = function(event) {
