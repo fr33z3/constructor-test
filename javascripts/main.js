@@ -1,19 +1,9 @@
-// constructorListener = function(event) {
-//   alert(event.origin + ' ' + event.data);
-// }
-
-// if (window.addEventListener) {
-//   addEventListener("message", constructorListener, false)
-// } else {
-//   attachEvent("onmessage", constructorListener)
-// }
-
-dragOverHandler = function(event) {
-  console.log('over');
-  event.preventDefault();
+constructorListener = function(event) {
+  alert(event.origin + ' ' + event.data);
 }
 
-dropHandler = function(event) {
-  alert(1);
-  console.log(event);
+if (window.addEventListener) {
+  addEventListener("message", constructorListener, false)
+} else {
+  attachEvent("onmessage", constructorListener)
 }
