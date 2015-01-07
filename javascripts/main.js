@@ -1,9 +1,9 @@
 constructorListener = function(event) {
-  data = event.data
-  body = document.body
-  if (data.type == 'setUp') {
-    alert(data)
-  }
+  // data = event.data
+  // body = document.body
+  // if (data.type == 'setUp') {
+  // }
+  alert(data)
 }
 
 if (window.addEventListener) {
