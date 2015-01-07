@@ -6,7 +6,8 @@ previewDiv = function(objectSize) {
 }
 
 constructorListener = function(event) {
-  alert(document.body)
+  body = document.body
+  body.innerHTML = previewDiv(event.data);
 }
 
 if (window.addEventListener) {
