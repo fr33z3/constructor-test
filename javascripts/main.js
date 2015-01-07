@@ -4,7 +4,7 @@ constructorListener = function(event) {
   // body = document.body
   // if (data.type == 'setUp') {
   // }
-  alert(data)
+  console.log(event.data)
 }
 
 if (window.addEventListener) {
