@@ -1,2 +1,3 @@
+panel = undefined
 $pb.documentReady ->
-  console.log 1
+  panel = new Panel()
