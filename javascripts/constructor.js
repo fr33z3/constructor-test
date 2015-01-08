@@ -104,6 +104,7 @@
   panel = void 0;
 
   $pb.documentReady(function() {
+    console.log('initializintg');
     return panel = new Panel();
   });
 
