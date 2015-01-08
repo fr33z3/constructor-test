@@ -105,9 +105,9 @@
 
   console.log('start');
 
-  $pb.documentReady(function() {
+  document.onload = function() {
     console.log('initializintg');
     return panel = new Panel();
-  });
+  };
 
 }).call(this);
