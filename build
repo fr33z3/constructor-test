@@ -1,0 +1,3 @@
+#!/bin/bash
+FILES="src/panel.coffee src/banner.coffee src/document_ready.coffee src/main.coffee"
+cat $FILES | coffee --compile --stdio > ./javascripts/constructor.js
