@@ -1,4 +1,3 @@
 panel = undefined
-console.log('start', $)
-@.onload = ->
+@onload = ->
   console.log('initializintg');

@@ -35,8 +35,6 @@
 
   panel = void 0;
 
-  console.log('start', $);
-
   this.onload = function() {
     return console.log('initializintg');
   };
