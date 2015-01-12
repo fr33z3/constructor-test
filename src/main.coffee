@@ -1,5 +1,4 @@
 panel = undefined
 console.log('start')
-document.onload = ->
+$(document).ready ->
   console.log('initializintg');
-  panel = new Panel()
