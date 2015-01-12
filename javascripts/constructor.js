@@ -37,10 +37,8 @@
 
   console.log('start', $);
 
-  $.noConflict();
-
-  $('body').ready(function() {
+  this.onload = function() {
     return console.log('initializintg');
-  });
+  };
 
 }).call(this);

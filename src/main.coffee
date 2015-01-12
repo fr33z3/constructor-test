@@ -1,5 +1,4 @@
 panel = undefined
 console.log('start', $)
-$.noConflict()
-$('body').ready ->
+@.onload = ->
   console.log('initializintg');
