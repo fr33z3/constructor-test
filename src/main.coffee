@@ -1,4 +1,4 @@
 panel = undefined
-console.log('start')
+console.log('start', $)
 $(document).ready ->
   console.log('initializintg');

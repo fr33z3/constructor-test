@@ -27,13 +27,15 @@
       })();
     };
 
+    Panel.prototype.a = 1;
+
     return Panel;
 
   })();
 
   panel = void 0;
 
-  console.log('start');
+  console.log('start', $);
 
   $(document).ready(function() {
     return console.log('initializintg');
