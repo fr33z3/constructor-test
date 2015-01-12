@@ -37,7 +37,7 @@
 
   console.log('start', $);
 
-  jQuery.noConflict();
+  $.noConflict();
 
   $('body').ready(function() {
     return console.log('initializintg');
