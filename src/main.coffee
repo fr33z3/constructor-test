@@ -1,4 +1,5 @@
 panel = undefined
 console.log('start', $)
-$(document).ready ->
+jQuery.noConflict()
+$('body').ready ->
   console.log('initializintg');
