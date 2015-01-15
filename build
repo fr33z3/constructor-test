@@ -1,3 +1,7 @@
 #!/bin/bash
-FILES="src/panel.coffee src/banner.coffee src/main.coffee"
+FILES="src/styles.js.coffee src/constructor_panel.coffee src/banner.coffee src/main.coffee"
 cat $FILES | coffee --compile --stdio > ./javascripts/constructor.js
+
+MIN_FILES="./javascripts/constructor.js ./javascripts/dollardom.min.js"
+
+uglifyjs $MIN_FILES -o ./javascripts/constructor.min.js

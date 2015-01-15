@@ -1,0 +1,4 @@
+#!/bin/bash
+DOLLAR_DOM="https://raw.githubusercontent.com/julienw/dollardom/master/dollardom.min.js"
+
+curl $DOLLAR_DOM > ./javascripts/dollardom.min.js
