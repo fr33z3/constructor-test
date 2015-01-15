@@ -8,10 +8,11 @@ class @Banner
     @previewImage.src = @uri
     @previewImage.draggable = true
 
-    @previewImage.addEventListener 'dragstart', @previewElementDragStart.bind(@), false
-    
     @_image = $dom.create('img.banner')
     @_image.src = @uri
+
+    @previewImage.addEventListener 'dragstart', @previewElementDragStart.bind(@), false
+    @_image.addEventListener 'dragstart', @previewElementDragStart.bind(@), false
 
   previewWidth: ->
     @previewImage.naturalWidth
@@ -34,25 +35,35 @@ class @Banner
   image: ->
     @_image
 
-insertElement = (target, insertingElement)->
-  unless target == insertingElement
-    if target.tagName == 'BODY'
-      console.log("appendChild:")
-      console.log(target)
-      target.appendChild(insertingElement)
-    else if target && target.parentNode
-      console.log("insertBefore:")
-      console.log(target)
-      target.parentNode.insertBefore(insertingElement, target)
+# insertElement = (target, insertingElement)->
+#   unless target == insertingElement
+#     if target.tagName == 'BODY'
+#       console.log("appendChild:")
+#       console.log(target)
+#       target.appendChild(insertingElement)
+#     else if target && target.parentNode
+#       console.log("insertBefore:")
+#       console.log(target)
+#       target.parentNode.insertBefore(insertingElement, target)
+
+# dragEnter = (event)->
+#   target = event.target
+#   if target && target != draggedElement.image()
+#     insertElement(target, draggedElement.image())
+
+# dragOver = (event)->
+#   event.preventDefault()
+#   false
+
+# document.addEventListener 'dragenter', dragEnter, false
+# document.addEventListener 'dragover', dragOver, false
 
 dragEnter = (event)->
   target = event.target
-  if target && target != draggedElement.image()
-    insertElement(target, draggedElement.image())
+  target.appendChild(draggedElement.image())
 
-dragOver = (event)->
-  event.preventDefault()
-  false
-
-document.addEventListener 'dragenter', dragEnter, false
-document.addEventListener 'dragover', dragOver, false
+$dom.onready ->
+  placementElements = $dom.get('.placement')
+  console.log(placementElements)
+  for el in placementElements
+    el.addEventListener 'dragenter', dragEnter, false
