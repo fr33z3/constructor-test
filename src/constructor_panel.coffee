@@ -1,4 +1,4 @@
-class ConstructorPanel
+class @ConstructorPanel
   constructor: ->
     @banners = []
 

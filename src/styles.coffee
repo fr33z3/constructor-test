@@ -1,4 +1,4 @@
-PANEL_BACKGROUND_STYLE = {
+@PANEL_BACKGROUND_STYLE = {
   left: 0
   top: 0
   position: 'absolute'
@@ -9,7 +9,7 @@ PANEL_BACKGROUND_STYLE = {
   "background-color": "black"
 }
 
-PANEL_STYLE = {
+@PANEL_STYLE = {
   left: 0
   top: 0
   position: 'absolute'
@@ -18,6 +18,6 @@ PANEL_STYLE = {
   heigth: '100%'
 }
 
-BANNER_IMG_STYLE = {
+@BANNER_IMG_STYLE = {
   margin: '10px'
 }
