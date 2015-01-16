@@ -1,5 +1,5 @@
 #!/bin/bash
-FILES="src/styles.js.coffee src/constructor_panel.coffee src/banner.coffee src/main.coffee"
+FILES="src/styles.js.coffee src/constructor_panel.coffee src/banner.coffee src/banner_placement.coffee src/main.coffee"
 cat $FILES | coffee --compile --stdio > ./javascripts/constructor.js
 
 MIN_FILES="./javascripts/constructor.js ./javascripts/dollardom.min.js"

@@ -1,6 +1,18 @@
 @constructorPanel = new ConstructorPanel()
+placements = []
+
+generatePlacements = ->
+  nodesOfInterest = $dom.get('body *')
+  for node in nodesOfInterest
+    placements.push(new BannerPlacement(node, 'before'))
+    placements.push(new BannerPlacement(node, 'after'))
+
+checkForInterest: (el)->
+  el.id != 'constrcutor-panel'
+
 $dom.onready =>
   @constructorPanel.attachTo(document.body)
+  generatePlacements()
 
 # For tests
 
