@@ -1,18 +1,35 @@
 @constructorPanel = new ConstructorPanel()
-placements = []
+@draggingElement = undefined
+@placements = []
 
-generatePlacements = ->
-  nodesOfInterest = $dom.get('body *')
-  for node in nodesOfInterest
-    placements.push(new BannerPlacement(node, 'before'))
-    placements.push(new BannerPlacement(node, 'after'))
+checkForInterest = (el)->
+  el &&
+  el.nodeName != '#text' &&
+  el.id != 'constructor-panel' &&
+  el.id != 'constructor-panel-background' &&
+  el.classList[0] != 'banner'
 
-checkForInterest: (el)->
-  el.id != 'constrcutor-panel'
+childArray = (node)->
+  array = []
+  for node in node.childNodes
+    array.push node
+  array
+
+generatePlacements = (parent)->
+  childNodes = childArray(parent)
+  lastNode = undefined
+  for node in childNodes
+    if checkForInterest(node)
+      generatePlacements(node)
+      new BannerPlacement(node, 'before')
+      lastNode = node
+  if lastNode
+    new BannerPlacement(lastNode, 'after')
+
 
 $dom.onready =>
   @constructorPanel.attachTo(document.body)
-  generatePlacements()
+  generatePlacements(document.body)
 
 # For tests
 

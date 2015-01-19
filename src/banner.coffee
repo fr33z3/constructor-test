@@ -1,5 +1,3 @@
-draggedElement = undefined
-
 class @Banner
   constructor: (@uri)->
     @previewImage = $dom.create('img.banner')
@@ -27,19 +25,10 @@ class @Banner
       @previewImage.height = 100
 
   previewElementDragStart: (event) ->
-    draggedElement = @
+    window.draggingElement = @
     setTimeout ->
       constructorPanel.hide()
     , 1
   
   image: ->
     @_image
-
-dragEnter = (event)->
-  target = event.target
-  target.appendChild(draggedElement.image())
-
-$dom.onready ->
-  placementElements = $dom.get('.placement')
-  for el in placementElements
-    el.addEventListener 'dragenter', dragEnter, false
